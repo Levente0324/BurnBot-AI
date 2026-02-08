@@ -56,7 +56,7 @@ const LandingPage: React.FC = () => {
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tight uppercase font-sans">
           <span className="block text-white mb-2">Get Roasted By</span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8B5CF6] via-[#DD00FF] to-[#7A00B5] animate-pulse-slow">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6D46BD] via-[#DD00FF] to-[#6D46BD] animate-pulse-slow">
             Artificial Intelligence
           </span>
         </h1>

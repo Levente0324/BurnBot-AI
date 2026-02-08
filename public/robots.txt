@@ -1,0 +1,8 @@
+# BurnBot AI - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+
+# Sitemap (uncomment and update if you add one later)
+# Sitemap: https://burnbot-ai-8a28e1364a74.herokuapp.com/sitemap.xml

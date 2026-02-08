@@ -502,6 +502,12 @@ ${style === "Poetry" ? "Write this as an elegant, dramatic poem — the kind a V
 ${style === "Passive-Aggressive" ? "Write this as a masterclass in corporate passive-aggression. Think HR emails, performance reviews, and LinkedIn posts. Backhanded compliments, weaponized pleasantries, and 'per my last email' energy. Every sentence should sound polite but hit like a truck." : ""}
 ${style === "Normal" ? "Write this as a classic roast — punchy one-liners mixed with longer setups and payoffs. Think Comedy Central Roast energy: savage but hilarious, the kind of burns that make even the target laugh." : ""}
 
+LANGUAGE RULE (CRITICAL):
+- Detect the language used in the target's name, relationship, and traits.
+- If the input is in a non-English language, write the ENTIRE roast in that SAME language.
+- If the input is mixed languages, use the dominant language.
+- The rhyme scheme and wordplay must work in the detected language.
+
 RULES:
 1. Write exactly 16 lines organized into 4 stanzas of 4 lines each.
 2. Use AABB rhyme scheme (lines 1-2 rhyme, lines 3-4 rhyme).
@@ -626,8 +632,8 @@ app.post(
     };
 
     const prompt = isRemix
-      ? `Edit/remix this caricature concept: ${description}. Maintain exaggerated editorial cartoon style with vibrant colors, clean lines, and purple accents.`
-      : `Create a high-end digital caricature in the style of Apple Memojis mixed with professional editorial cartoons. Subject description: ${description}. Style: Exaggerated features, goofy and non-malicious, vibrant marker textures, clean lines, soft studio lighting, white background, purple accent highlights. Square aspect ratio.`;
+      ? `Edit/remix this caricature concept: ${description}. Maintain exaggerated editorial cartoon style with vibrant colors, clean lines, and purple accents. Understand the description regardless of what language it is written in.`
+      : `Create a high-end digital caricature in the style of Apple Memojis mixed with professional editorial cartoons. Subject description: ${description}. Style: Exaggerated features, goofy and non-malicious, vibrant marker textures, clean lines, soft studio lighting, white background, purple accent highlights. Square aspect ratio. Understand the description regardless of what language it is written in.`;
 
     try {
       const response = await fetch(

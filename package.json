@@ -1,0 +1,31 @@
+{
+  "name": "burnbot-ai",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "node --watch server/server.js",
+    "build": "vite build",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build && cd server && npm install --production"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.95.3",
+    "framer-motion": "^12.33.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
